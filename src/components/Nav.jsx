@@ -3,10 +3,10 @@ import ActionButton from "./ActionButton";
 
 const Nav = () => {
     const links = <>
-        <li><a><NavLink>Home</NavLink></a></li>
-        <li><a><NavLink>Statistics</NavLink></a></li>
-        <li><a><NavLink>Applied Jobs</NavLink></a></li>
-        <li><a><NavLink>Blog</NavLink></a></li>
+        <li><NavLink>Home</NavLink></li>
+        <li><NavLink>Statistics</NavLink></li>
+        <li><NavLink>Applied Jobs</NavLink></li>
+        <li><NavLink>Blog</NavLink></li>
     </>
     return (
         <div className=" bg-purple-200 shadow-sm p-6">
