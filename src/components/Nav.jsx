@@ -5,7 +5,7 @@ const Nav = () => {
     const links = <>
         <li><NavLink>Home</NavLink></li>
         <li><NavLink>Statistics</NavLink></li>
-        <li><NavLink>Applied Jobs</NavLink></li>
+        <li><NavLink to='/applied'>Applied Jobs</NavLink></li>
         <li><NavLink>Blog</NavLink></li>
     </>
     return (
