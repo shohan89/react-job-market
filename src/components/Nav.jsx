@@ -25,7 +25,7 @@ const Nav = () => {
                     <a className="btn btn-ghost text-xl">Job Market</a>
                 </div>
                 <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                    <ul className="menu menu-horizontal px-1 font-bold">
                     {links}
                     </ul>
                 </div>
