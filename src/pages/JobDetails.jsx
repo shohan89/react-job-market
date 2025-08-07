@@ -1,4 +1,5 @@
 import { Link, useLoaderData, useParams } from "react-router";
+import { ToastContainer, toast } from 'react-toastify';
 
 const JobDetails = () => {
     const jobs = useLoaderData();
@@ -7,6 +8,9 @@ const JobDetails = () => {
     const job = jobs.find(job => job.id === idInt);
     const {job_title, salary, job_description, job_responsibility, educational_requirements, experiences} = job;
     const {phone, email, address} = job.contact_information;
+    const handleApplyNow = () =>{
+        toast.success('You have applied successfully!')
+    }
     return (
         <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-extrabold text-center py-8">Job Details</h2>
@@ -31,11 +35,12 @@ const JobDetails = () => {
                         <p className="flex items-center gap-3 text-[20px] font-medium text-gray-600 my-4"><span className="font-bold text-black">Email:</span> {email}</p>
                         <p className="flex items-center gap-3 text-[20px] font-medium text-gray-600"><span className="font-bold text-black">Address:</span> {address}</p>
                     </div>
-                    <div className="w-full btn btn-primary">
+                    <div onClick={handleApplyNow} className="w-full btn btn-primary">
                         <Link className="">Apply Now</Link>
                     </div>
                 </div>
             </div>
+            <ToastContainer />
         </div>
     );
 };
