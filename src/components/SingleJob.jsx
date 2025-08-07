@@ -1,3 +1,5 @@
+import { AiOutlineDollar } from "react-icons/ai";
+import { LuMapPin } from "react-icons/lu";
 import ActionButton from "./ActionButton";
 import JobTypeButton from "./JobTypeButton";
 
@@ -19,8 +21,8 @@ const SingleJob = ({ job }) => {
                     <JobTypeButton tittle={job_type} />
                 </div>
                 <div className="flex mb-6">
-                    <p>{location}</p>
-                    <p>{salary}</p>
+                    <p className="flex items-center text-[20px] font-semibold text-gray-400"><LuMapPin /> {location}</p>
+                    <p className="flex items-center gap-4 text-[20px] font-semibold text-gray-400"><AiOutlineDollar /> {salary}</p>
                 </div>
                 <div className="card-actions">
                     <ActionButton tittle={'View Details'} />
