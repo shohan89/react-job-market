@@ -4,7 +4,7 @@ import ActionButton from "./ActionButton";
 import JobTypeButton from "./JobTypeButton";
 
 const SingleJob = ({ job }) => {
-    const {logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
+    const {id, logo, job_title, company_name, remote_or_onsite, location, job_type, salary} = job;
     return (
         <div className="card bg-base-100 shadow-sm items-start">
             <figure>
@@ -25,7 +25,7 @@ const SingleJob = ({ job }) => {
                     <p className="flex items-center gap-4 text-[20px] font-semibold text-gray-400"><AiOutlineDollar /> {salary}</p>
                 </div>
                 <div className="card-actions">
-                    <ActionButton tittle={'View Details'} />
+                    <ActionButton url={`/job/${id}`} tittle={'View Details'} />
                 </div>
             </div>
         </div>

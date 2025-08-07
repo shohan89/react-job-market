@@ -5,6 +5,7 @@ import './App.css'
 import MainLayout from './layouts/MainLayout.jsx'
 import AppliedJobs from './pages/AppliedJobs.jsx'
 import Home from './pages/Home.jsx'
+import JobDetails from './pages/JobDetails.jsx'
 
 const router = createBrowserRouter([
   {
@@ -18,6 +19,11 @@ const router = createBrowserRouter([
       {
         path: '/applied',
         element: <AppliedJobs />
+      },
+      {
+        path: `/job/:id`,
+        element: <JobDetails />,
+        loader: ()=> fetch(`jobs.json`)
       }
     ]
   }
